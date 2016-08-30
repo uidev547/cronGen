@@ -9,13 +9,21 @@
     <title></title>
 </head>
     <body>
-        <input id="cron" />
+        <div style="width: 500px; margin: 0 auto; margin-top: 100px;">
+            <input id="cron" />
+            <span id="result"></span>
+        </div>
         <script>
             $(function () {
                 $("#cron").cronGen();                
+                $( '#cron' ).on( 'change', function() {
+                    debugger;
+                    $('#result').html( $( this ).val() );
+                } );
             });
+
         </script>
-        <script src="CronGen.min.js"></script>
+        <script src="./cronGen.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
